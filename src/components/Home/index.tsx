@@ -1,8 +1,13 @@
 import React, { ReactElement } from "react";
 import GameList from "components/GameList";
+import withErrorBoundary from "hoc/withErrorBoundary";
 
 const Home = (): ReactElement => {
-  return <GameList />;
+  return (
+    <main>
+      <GameList />;
+    </main>
+  );
 };
 
-export default Home;
+export default withErrorBoundary(Home);
