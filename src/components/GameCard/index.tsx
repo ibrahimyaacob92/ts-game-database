@@ -1,6 +1,14 @@
 import React, { ReactElement } from "react";
 import { Game } from "types";
-import { Description, Details, Genre, Img, StyledLink, Title } from "./styles";
+import {
+  Description,
+  Details,
+  Genre,
+  Icons,
+  Img,
+  StyledLink,
+  Title,
+} from "./styles";
 import windowsIcon from "assets/icons/windows.svg";
 import browserIcon from "assets/icons/browser.svg";
 import { BROWSER, WINDOWS } from "./constants";
@@ -17,12 +25,12 @@ function GameCard({ content }: Props): ReactElement {
     switch (p.trim()) {
       case BROWSER:
         icon = (
-          <img key={`${id}-browser`} alt="browser-icon" src={browserIcon} />
+          <Icons key={`${id}-browser`} alt="browser-icon" src={browserIcon} />
         );
         break;
       case WINDOWS:
         icon = (
-          <img key={`${id}-windows`} alt="windows-icon" src={windowsIcon} />
+          <Icons key={`${id}-windows`} alt="windows-icon" src={windowsIcon} />
         );
         break;
       default:
