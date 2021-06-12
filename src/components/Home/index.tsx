@@ -1,7 +1,8 @@
 import React, { ReactElement } from "react";
+import GameList from "components/GameList";
 
 const Home = (): ReactElement => {
-  return <div>Home</div>;
+  return <GameList />;
 };
 
 export default Home;
